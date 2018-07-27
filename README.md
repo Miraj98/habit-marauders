@@ -1,7 +1,7 @@
 # habit-marauders
 Gamifying productivity by using the power of decentralised networks
 
-##Run
+#Run
 1. git clone or download zip
 2. `cd habit-marauders`
 3. `truffle compile`
