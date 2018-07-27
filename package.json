@@ -1,0 +1,23 @@
+{
+  "name": "habit-marauders",
+  "version": "1.0.0",
+  "description": "Gamifying productivity by using the power of decentralised networks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miraj98/habit-marauders.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Miraj98/habit-marauders/issues"
+  },
+  "homepage": "https://github.com/Miraj98/habit-marauders#readme",
+  "devDependencies": {
+    "web3": "^0.20.0"
+  }
+}
