@@ -1,6 +1,4 @@
-/*
-    Implement Health Points for every Habit instead of Avatar
-*/
+
 
 
 pragma solidity ^0.4.24;
