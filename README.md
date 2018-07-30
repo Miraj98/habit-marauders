@@ -7,6 +7,7 @@ Gamifying habits through a type of PoS implementation
 - Those tokens can then act as a currency that fuels a decentralised RPG-style game.
 
 **Inspiration**
+
 Habitica: https://habitica.com/static/home
 
 **Things/features implemented**
