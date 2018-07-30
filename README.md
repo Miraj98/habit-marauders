@@ -1,22 +1,24 @@
 # habit-marauders
 Gamifying habits through a type of PoS implementation
 
-**Details**
+**Details:**
 - The idea is to incentivise users to form good habits.
 - Users will be rewarded with in-app tokens if they complete their productivity goals.
 - Those tokens can then act as a currency that fuels a decentralised RPG-style game.
 
-**Inspiration**
+**Inspiration:**
 
 Habitica: https://habitica.com/static/home
 
-**Things/features implemented**
+
+
+**Things/features implemented:**
 - Making a new Avatar.
 - Adding new habits to the Avatar.
 - The user can lock funds when he/she starts a new habit
 - They are rewarded with in-app tokens if they complete all their habit sessions before losing their Avatar's health points. Avatars lose their health if the user does not complete his/her task before a particluar day that he/she decides.
 
-**Run**
+**Run:**
 1. git clone or download zip
 2. `cd habit-marauders`
 3. `truffle compile`
@@ -24,7 +26,7 @@ Habitica: https://habitica.com/static/home
 5. `migrate`
 6. Call contract functions as desired.
 
-**Notes**
+**Notes:**
 
 UI is not yet operational but the contract can be interacted with on Truffle console.
 
