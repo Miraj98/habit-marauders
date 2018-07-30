@@ -25,7 +25,7 @@ contract HabitContract is AvatarContract {
         return (_title,_description,_periodicity,_totalSessions,_sessionsCompleted);
     }
 
-    function deleteHabit(uint habitId) external {
+    function deleteHabit(uint habitId) public {
         Avatar storage avatar = avatars[avatar_id_of[msg.sender]];
         avatar.Habits[habitId] = avatar.Habits[avatar.number_of_habits-1];
         delete avatar.Habits[avatar.number_of_habits-1];
