@@ -14,14 +14,14 @@ contract AvatarContract {
     struct Avatar {
         string name;
         uint8 health;
-        uint avatar_dna;
-        uint number_of_habits;
-        uint amount_locked;
+        uint avatarDna;
+        uint numberOfHabits;
+        uint amountLocked;
         mapping (uint => Habit) Habits;
     }
 
     Avatar[] public avatars;
-    mapping (address => uint) public avatar_id_of;
+    mapping (address => uint) public avatarIdOf;
 
     function generateUniqueId(address _address) internal pure returns(uint) {
         return uint(keccak256(abi.encodePacked(_address)))%10**16;
@@ -30,7 +30,7 @@ contract AvatarContract {
     function createAvatar(string _name) external {
         address caller = msg.sender;
         uint dna = generateUniqueId(caller);
-        avatar_id_of[caller] = avatars.length;
+        avatarIdOf[caller] = avatars.length;
         avatars.push(Avatar(_name, 100, dna, 0, 0));
     }
     

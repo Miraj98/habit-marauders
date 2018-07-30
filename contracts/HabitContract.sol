@@ -9,31 +9,31 @@ contract HabitContract is AvatarContract {
         string _description,
         uint _periodicity,
         uint _totalSessions) internal {
-        Avatar storage avatar = avatars[avatar_id_of[msg.sender]];   
-        avatar.Habits[avatar.number_of_habits] = Habit(_name, _description, _periodicity, _totalSessions, 0);
-        avatar.number_of_habits++;
+        Avatar storage avatar = avatars[avatarIdOf[msg.sender]];   
+        avatar.Habits[avatar.numberOfHabits] = Habit(_name, _description, _periodicity, _totalSessions, 0);
+        avatar.numberOfHabits++;
         
     }
 
-    function getHabit( uint habitId) external view returns(string,string,uint,uint,uint) {
-        Avatar storage avatar = avatars[avatar_id_of[msg.sender]];
+    function getHabit( uint habitId) external view returns(string, string, uint, uint, uint) {
+        Avatar storage avatar = avatars[avatarIdOf[msg.sender]];
         string storage _title = avatar.Habits[habitId].title;
         string storage _description = avatar.Habits[habitId].description;
         uint _periodicity = avatar.Habits[habitId].periodicity;
         uint _totalSessions = avatar.Habits[habitId].totalSessions;
         uint _sessionsCompleted = avatar.Habits[habitId].sessionsCompleted;
-        return (_title,_description,_periodicity,_totalSessions,_sessionsCompleted);
+        return (_title, _description, _periodicity, _totalSessions, _sessionsCompleted);
     }
 
     function deleteHabit(uint habitId) external {
-        Avatar storage avatar = avatars[avatar_id_of[msg.sender]];
-        avatar.Habits[habitId] = avatar.Habits[avatar.number_of_habits-1];
-        delete avatar.Habits[avatar.number_of_habits-1];
-        avatar.number_of_habits--;
+        Avatar storage avatar = avatars[avatarIdOf[msg.sender]];
+        avatar.Habits[habitId] = avatar.Habits[avatar.numberOfHabits-1];
+        delete avatar.Habits[avatar.numberOfHabits-1];
+        avatar.numberOfHabits--;
 
     }
 
     function getNumberOfHabits() external view returns(uint) {
-        return avatars[avatar_id_of[msg.sender]].number_of_habits;
+        return avatars[avatarIdOf[msg.sender]].numberOfHabits;
     }
 }

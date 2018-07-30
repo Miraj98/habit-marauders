@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="node_modules/web3/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Habit Marauder</h1>
+
+        <label for="name" class="col-lg-2 control-label">Avatar Name</label>
+        <input id="name" type="text">
+
+        <button id="button" onclick="createAvatar()">Create Avatar</button>
+
+        <label for="habit" class="col-lg-2 control-label">Habit Name</label>
+        <input id="habit" type="text">
+
+        <button id="button" onclick="addHabit()">Create New Habit</button>
+
+    </div>
+    <script>
+        function createAvatar(name) {
+            HabitContract.deployed().then(function(instance){
+                instance.createAvatar("");
+            })
+        }
+    </script>
+</body>
+</html>
