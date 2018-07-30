@@ -16,7 +16,7 @@ Habitica: https://habitica.com/static/home
 - Making a new Avatar.
 - Adding new habits to the Avatar.
 - The user can lock funds when he/she starts a new habit
-- They are rewarded with in-app tokens if they complete all their habit sessions before losing their Avatar's health points. Avatars lose their health if the user does not complete his/her task before a particluar day that he/she decides.
+- They are rewarded with in-app tokens if they complete all their habit sessions before losing their Avatar's health points. Avatars lose their health if the user does not complete his/her task before a particluar day that he/she has decided.
 
 **Run:**
 1. git clone or download zip
