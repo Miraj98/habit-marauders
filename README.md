@@ -28,7 +28,7 @@ Habitica: https://habitica.com/static/home
 
 **Notes:**
 
-UI is not yet operational but the contract can be interacted with on Truffle console.
+UI is not yet operational but the contract can be interacted with on Truffle console. However, it is much recommended to test the contract functionalities through the Remix IDE at https://remix.ethereum.org .
 
 For Example:
 run the following command in the truffle console to create a new avatar
