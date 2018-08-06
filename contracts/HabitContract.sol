@@ -10,7 +10,7 @@ contract HabitContract is AvatarContract {
         uint _periodicity,
         uint _totalSessions) internal {
         Avatar storage avatar = avatars[avatarIdOf[msg.sender]];   
-        avatar.Habits[avatar.numberOfHabits] = Habit(_name, _description, _periodicity, _totalSessions, 0);
+        avatar.Habits[avatar.number_of_habits] = Habit(_name, _description, _periodicity, _totalSessions, 0);
         avatar.number_of_habits++;
         
     }
