@@ -24,15 +24,15 @@ contract TrackHabit is TokenContract, HabitContract {
 
         fundsLocked[msg.sender] = msg.value;
         addHabit(_name, _description, _periodicity, _totalSessions);
-        sessionTimestamps[msg.sender][avatars[avatar_id_of[msg.sender]].number_of_habits-1] = now;
+        sessionTimestamps[msg.sender][avatars[avatarIdOf[msg.sender]].number_of_habits-1] = now;
     }
 
     function markSessionAsComplete(uint habitId) external {
 
         uint timeOfLastSession = sessionTimestamps[msg.sender][habitId]*1 seconds;
-        uint _periodicity = avatars[avatar_id_of[msg.sender]].Habits[habitId].periodicity;
+        uint _periodicity = avatars[avatarIdOf[msg.sender]].Habits[habitId].periodicity;
         int sessionsMissed = int(now - timeOfLastSession/_periodicity);
-        Avatar storage avatar = avatars[avatar_id_of[msg.sender]];
+        Avatar storage avatar = avatars[avatarIdOf[msg.sender]];
 
         if(sessionsMissed > 0) {
             avatar.health = avatar.health - 10*uint(sessionsMissed);
