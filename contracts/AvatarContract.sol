@@ -35,7 +35,7 @@ contract AvatarContract {
     }
 
     function getAvatar() external view returns(string) {
-        return avatars[avatar_id_of[msg.sender]].name;
+        return avatars[avatarIdOf[msg.sender]].name;
     }
     
     
