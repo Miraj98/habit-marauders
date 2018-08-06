@@ -34,6 +34,6 @@ contract HabitContract is AvatarContract {
     }
 
     function getNumberOfHabits() external view returns(uint) {
-        return avatars[avatarIdOf[msg.sender]].numberOfHabits;
+        return avatars[avatarIdOf[msg.sender]].number_of_habits;
     }
 }
