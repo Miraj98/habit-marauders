@@ -26,7 +26,7 @@ contract HabitContract is AvatarContract {
     }
 
     function deleteHabit(uint habitId) public {
-        Avatar storage avatar = avatars[avatar_id_of[msg.sender]];
+        Avatar storage avatar = avatars[avatarIdOf[msg.sender]];
         avatar.Habits[habitId] = avatar.Habits[avatar.number_of_habits-1];
         delete avatar.Habits[avatar.number_of_habits-1];
         avatar.number_of_habits--;
