@@ -27,6 +27,7 @@ contract TrackHabit is TokenContract, HabitContract {
         sessionTimestamps[msg.sender][avatars[avatarIdOf[msg.sender]].number_of_habits-1] = now;
     }
 
+
     function markSessionAsComplete(uint habitId) external {
 
         uint timeOfLastSession = sessionTimestamps[msg.sender][habitId]*1 seconds;
